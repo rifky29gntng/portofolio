@@ -1,1 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iki | Portofolio Futuristik</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://files.catbox.moe/lgw6ym.jpeg">
+</head>
+<body>
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="neon-loader"></div>
+            <h1 id="loading-text">Sabar kak, lagi loading...</h1>
+        </div>
+    </div>
 
+    <!-- MAIN CONTENT (hidden until loading selesai) -->
+    <div id="main-content" class="hidden">
+        <!-- HEADER & NAV -->
+        <header class="glass-header">
+            <div class="logo">IKI<span class="neon-dot">.</span></div>
+            <button id="theme-toggle" class="neon-btn">Ganti Tema <i class="fas fa-palette"></i></button>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="profile-container">
+                <div class="profile-pic">
+                    <img src="https://files.catbox.moe/lgw6ym.jpeg" alt="Foto Iki" id="profile-image">
+                    <div class="neon-ring"></div>
+                </div>
+                <h2 class="greeting">Halo kak, disini saya Iki ingin perkenalan sedikit tentang saya</h2>
+            </div>
+        </section>
+
+        <!-- PERKENALAN SECTION -->
+        <section class="section glass-card">
+            <h2 class="section-title"><i class="fas fa-user-astronaut"></i> Perkenalan</h2>
+            <p class="section-content">Halo kak, saya adalah Iki yang kelas 8. Iki adalah anak yang suka banget nonton YouTuber Luthi Halimawan dan orang-orang O2H.</p>
+        </section>
+
+        <!-- ALL SUPPORT SECTION -->
+        <section class="section glass-card">
+            <h2 class="section-title"><i class="fas fa-heart"></i> All Support Saya</h2>
+            <div class="support-grid">
+                <div class="support-category">
+                    <h3 class="neon-cyan">Family (Number One)</h3>
+                    <ul>
+                        <li>Family</li>
+                    </ul>
+                </div>
+                <div class="support-category">
+                    <h3 class="neon-purple">Saudara Terbaik</h3>
+                    <ul>
+                        <li>Daris</li>
+                        <li>Amar</li>
+                        <li>Mas Zaki</li>
+                        <li>Zahi</li>
+                    </ul>
+                </div>
+                <div class="support-category">
+                    <h3 class="neon-pink">Sahabat Gwejh</h3>
+                    <ul>
+                        <li>Nanda</li>
+                        <li>Ajis</li>
+                        <li>Ais</li>
+                        <li>Raka</li>
+                    </ul>
+                </div>
+                <div class="support-category">
+                    <h3 class="neon-green">Teman Ku</h3>
+                    <ul>
+                        <li>Han</li>
+                        <li>Anangga</li>
+                        <li>Restu</li>
+                        <li>Zannn</li>
+                        <li>All friends in my school</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTAK SECTION -->
+        <section class="section glass-card">
+            <h2 class="section-title"><i class="fas fa-comment-dots"></i> Kalau kurang, bisa tanya-tanya aja</h2>
+            <div class="contact-buttons">
+                <a href="https://wa.me/6285811661918" target="_blank" class="contact-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp 1</a>
+                <a href="https://wa.me/6282113297923" target="_blank" class="contact-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp 2</a>
+                <a href="https://t.me/rkyyzz" target="_blank" class="contact-btn telegram"><i class="fab fa-telegram"></i> Telegram 1</a>
+                <a href="https://t.me/aiemimki" target="_blank" class="contact-btn telegram"><i class="fab fa-telegram"></i> Telegram 2</a>
+            </div>
+        </section>
+
+        <!-- MUSIC PLAYER -->
+        <section class="section glass-card">
+            <h2 class="section-title"><i class="fas fa-music"></i> Music Player</h2>
+            <div class="music-player">
+                <div class="player-controls">
+                    <button id="prev-btn" class="control-btn"><i class="fas fa-step-backward"></i></button>
+                    <button id="play-btn" class="control-btn play-btn"><i class="fas fa-play"></i></button>
+                    <button id="pause-btn" class="control-btn"><i class="fas fa-pause"></i></button>
+                    <button id="stop-btn" class="control-btn"><i class="fas fa-stop"></i></button>
+                    <button id="next-btn" class="control-btn"><i class="fas fa-step-forward"></i></button>
+                </div>
+                <div class="playlist-info">
+                    <div class="visualizer">
+                        <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>© 2025 Iki – All Rights Reserved</p>
+            <p class="footer-sub">Dibuat dengan <i class="fas fa-heart neon-pulse"></i> dan efek neon berlebihan</p>
+        </footer>
+    </div>
+
+    <!-- ENTER BUTTON (muncul setelah loading) -->
+    <button id="enter-btn" class="hidden neon-enter">Masuk <i class="fas fa-chevron-right"></i></button>
+
+    <!-- AUDIO ELEMENT FOR MUSIC -->
+    <audio id="audio-player" preload="metadata">
+        <!-- Playlist akan diisi oleh script.js -->
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+          </html>
