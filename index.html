@@ -3,112 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iki | Portofolio Futuristik</title>
+    <title>Iki | Portfolio Neon</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="https://files.catbox.moe/lgw6ym.jpeg">
 </head>
 <body>
     <!-- LOADING SCREEN -->
-    <div id="loading-screen">
-        <div class="loading-content">
-            <div class="neon-loader"></div>
-            <h1 id="loading-text">Sabar kak, lagi loading...</h1>
+    <div id="loading-screen" class="loading-active">
+        <div class="loading-container">
+            <h1 class="loading-title">SYSTEM BOOTING</h1>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+                <div class="progress-text" id="progress-text">1%</div>
+            </div>
+            <div class="loading-subtitle">Initializing neon modules...</div>
         </div>
     </div>
 
-    <!-- MAIN CONTENT (hidden until loading selesai) -->
-    <div id="main-content" class="hidden">
-        <!-- HEADER & NAV -->
-        <header class="glass-header">
-            <div class="logo">IKI<span class="neon-dot">.</span></div>
-            <button id="theme-toggle" class="neon-btn">Ganti Tema <i class="fas fa-palette"></i></button>
-        </header>
+    <!-- MAIN CONTENT (hidden until loading complete) -->
+    <div id="main-content" class="content-hidden">
+        <!-- THEME TOGGLE -->
+        <div class="theme-toggle">
+            <button id="theme-switch" class="neon-btn">
+                <i class="fas fa-palette"></i> TOGGLE THEME
+            </button>
+        </div>
 
-        <!-- HERO SECTION -->
-        <section class="hero">
-            <div class="profile-container">
-                <div class="profile-pic">
-                    <img src="https://files.catbox.moe/lgw6ym.jpeg" alt="Foto Iki" id="profile-image">
-                    <div class="neon-ring"></div>
-                </div>
-                <h2 class="greeting">Halo kak, disini saya Iki ingin perkenalan sedikit tentang saya</h2>
+        <!-- PROFILE SECTION -->
+        <section class="profile-section">
+            <div class="profile-image-container">
+                <img src="https://files.catbox.moe/n5rc90.jpg" alt="Profile Iki" class="profile-img">
+                <div class="profile-glow"></div>
+            </div>
+            <div class="intro-text">
+                <h1 class="neon-text">Halo kak, disini saya Iki ingin perkenalan sedikit tentang saya</h1>
             </div>
         </section>
 
-        <!-- PERKENALAN SECTION -->
-        <section class="section glass-card">
-            <h2 class="section-title"><i class="fas fa-user-astronaut"></i> Perkenalan</h2>
-            <p class="section-content">Halo kak, saya adalah Iki yang kelas 8. Iki adalah anak yang suka banget nonton YouTuber Luthi Halimawan dan orang-orang O2H.</p>
+        <!-- ABOUT SECTION -->
+        <section class="about-section">
+            <h2 class="section-title neon-title">Perkenalan</h2>
+            <div class="about-content">
+                <p class="neon-paragraph">Halo kak, saya adalah Iki yang kelas 8. Iki adalah anak yang suka banget nonton YouTuber Luthi Halimawan dan O2H.</p>
+            </div>
         </section>
 
-        <!-- ALL SUPPORT SECTION -->
-        <section class="section glass-card">
-            <h2 class="section-title"><i class="fas fa-heart"></i> All Support Saya</h2>
+        <!-- SUPPORT SECTION -->
+        <section class="support-section">
+            <h2 class="section-title neon-title">All Support Saya</h2>
             <div class="support-grid">
-                <div class="support-category">
-                    <h3 class="neon-cyan">Family (Number One)</h3>
-                    <ul>
-                        <li>Family</li>
-                    </ul>
+                <div class="support-card">
+                    <h3><i class="fas fa-heart"></i> family</h3>
+                    <p>Number One</p>
                 </div>
-                <div class="support-category">
-                    <h3 class="neon-purple">Saudara Terbaik</h3>
-                    <ul>
-                        <li>Daris</li>
-                        <li>Amar</li>
-                        <li>Mas Zaki</li>
-                        <li>Zahi</li>
-                    </ul>
+                <div class="support-card">
+                    <h3><i class="fas fa-star"></i> daris</h3>
+                    <p>Saudara terbaik</p>
                 </div>
-                <div class="support-category">
-                    <h3 class="neon-pink">Sahabat Gwejh</h3>
-                    <ul>
-                        <li>Nanda</li>
-                        <li>Ajis</li>
-                        <li>Ais</li>
-                        <li>Raka</li>
-                    </ul>
+                <div class="support-card">
+                    <h3><i class="fas fa-star"></i> amar</h3>
+                    <p>Saudara terbaik</p>
                 </div>
-                <div class="support-category">
-                    <h3 class="neon-green">Teman Ku</h3>
-                    <ul>
-                        <li>Han</li>
-                        <li>Anangga</li>
-                        <li>Restu</li>
-                        <li>Zannn</li>
-                        <li>All friends in my school</li>
-                    </ul>
+                <div class="support-card">
+                    <h3><i class="fas fa-star"></i> mas zaki</h3>
+                    <p>Saudara terbaik</p>
+                </div>
+                <div class="support-card">
+                    <h3><i class="fas fa-star"></i> zahi</h3>
+                    <p>Saudara terbaik</p>
+                </div>
+                <div class="support-card">
+                    <h3><i class="fas fa-user-friends"></i> nanda</h3>
+                    <p>Sahabat gwejh</p>
+                </div>
+                <div class="support-card">
+                    <h3><i class="fas fa-user-friends"></i> ajis</h3>
+                    <p>Sahabat gwejh</p>
+                </div>
+                <div class="support-card">
+                    <h3><i class="fas fa-user-friends"></i> ais</h3>
+                    <p>Sahabat gwejh</p>
+                </div>
+                <div class="support-card">
+                    <h3><i class="fas fa-user-friends"></i> raka</h3>
+                    <p>Sahabat gwejh</p>
+                </div>
+                <div class="support-card">
+                    <h3><i class="fas fa-users"></i> han</h3>
+                    <p>Teman ku</p>
+                </div>
+                <div class="support-card">
+                    <h3><i class="fas fa-users"></i> anangga</h3>
+                    <p>Teman ku</p>
+                </div>
+                <div class="support-card">
+                    <h3><i class="fas fa-users"></i> restu</h3>
+                    <p>Teman ku</p>
+                </div>
+                <div class="support-card">
+                    <h3><i class="fas fa-users"></i> zannn</h3>
+                    <p>Teman ku</p>
+                </div>
+                <div class="support-card">
+                    <h3><i class="fas fa-school"></i> all friends</h3>
+                    <p>Teman-teman di sekolahku</p>
                 </div>
             </div>
         </section>
 
-        <!-- KONTAK SECTION -->
-        <section class="section glass-card">
-            <h2 class="section-title"><i class="fas fa-comment-dots"></i> Kalau kurang, bisa tanya-tanya aja</h2>
+        <!-- CONTACT SECTION -->
+        <section class="contact-section">
+            <h2 class="section-title neon-title">Kontak</h2>
+            <p class="contact-text">Kalau kurang, bisa tanya-tanya aja</p>
             <div class="contact-buttons">
-                <a href="https://wa.me/6285811661918" target="_blank" class="contact-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp 1</a>
-                <a href="https://wa.me/6282113297923" target="_blank" class="contact-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp 2</a>
-                <a href="https://t.me/rkyyzz" target="_blank" class="contact-btn telegram"><i class="fab fa-telegram"></i> Telegram 1</a>
-                <a href="https://t.me/aiemimki" target="_blank" class="contact-btn telegram"><i class="fab fa-telegram"></i> Telegram 2</a>
+                <a href="https://wa.me/6285811661918" target="_blank" class="contact-btn whatsapp">
+                    <i class="fab fa-whatsapp"></i> WA 1
+                </a>
+                <a href="https://wa.me/6282113297923" target="_blank" class="contact-btn whatsapp">
+                    <i class="fab fa-whatsapp"></i> WA 2
+                </a>
+                <a href="https://t.me/rkyyzz" target="_blank" class="contact-btn telegram">
+                    <i class="fab fa-telegram"></i> Telegram 1
+                </a>
+                <a href="https://t.me/aiemimki" target="_blank" class="contact-btn telegram">
+                    <i class="fab fa-telegram"></i> Telegram 2
+                </a>
             </div>
         </section>
 
         <!-- MUSIC PLAYER -->
-        <section class="section glass-card">
-            <h2 class="section-title"><i class="fas fa-music"></i> Music Player</h2>
+        <section class="music-section">
+            <h2 class="section-title neon-title">Music Player</h2>
             <div class="music-player">
                 <div class="player-controls">
-                    <button id="prev-btn" class="control-btn"><i class="fas fa-step-backward"></i></button>
-                    <button id="play-btn" class="control-btn play-btn"><i class="fas fa-play"></i></button>
-                    <button id="pause-btn" class="control-btn"><i class="fas fa-pause"></i></button>
-                    <button id="stop-btn" class="control-btn"><i class="fas fa-stop"></i></button>
-                    <button id="next-btn" class="control-btn"><i class="fas fa-step-forward"></i></button>
+                    <button id="prev-btn" class="control-btn">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button id="play-btn" class="control-btn play">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button id="pause-btn" class="control-btn">
+                        <i class="fas fa-pause"></i>
+                    </button>
+                    <button id="stop-btn" class="control-btn">
+                        <i class="fas fa-stop"></i>
+                    </button>
+                    <button id="next-btn" class="control-btn">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
                 </div>
-                <div class="playlist-info">
-                    <div class="visualizer">
-                        <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                <div class="player-status">
+                    <div class="track-indicator">
+                        <i class="fas fa-music"></i> Track <span id="current-track">1</span>/4
                     </div>
                 </div>
             </div>
@@ -116,19 +163,17 @@
 
         <!-- FOOTER -->
         <footer class="footer">
-            <p>© 2025 Iki – All Rights Reserved</p>
-            <p class="footer-sub">Dibuat dengan <i class="fas fa-heart neon-pulse"></i> dan efek neon berlebihan</p>
+            <div class="footer-content">
+                <p class="neon-text">© 2026 Iki – All Rights Reserved</p>
+                <p class="footer-sub">Built with <i class="fas fa-heart"></i> and neon lights</p>
+            </div>
         </footer>
     </div>
 
-    <!-- ENTER BUTTON (muncul setelah loading) -->
-    <button id="enter-btn" class="hidden neon-enter">Masuk <i class="fas fa-chevron-right"></i></button>
+    <!-- AUDIO ELEMENT (hidden) -->
+    <audio id="audio-player" preload="auto"></audio>
 
-    <!-- AUDIO ELEMENT FOR MUSIC -->
-    <audio id="audio-player" preload="metadata">
-        <!-- Playlist akan diisi oleh script.js -->
-    </audio>
-
+    <!-- SCRIPTS -->
     <script src="script.js"></script>
 </body>
-          </html>
+                    </html>
